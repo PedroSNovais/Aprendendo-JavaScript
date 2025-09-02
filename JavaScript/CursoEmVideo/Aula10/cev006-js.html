@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+    <style>
+        div {
+            background-color: green;
+            font-size: 20pt;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        p {
+            font: bold 13pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Aula 10 de JavaScript
+    </h1>
+    <p> referenciando no HTML </p>
+    <hr>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja...
+    </div>
+    <hr>
+    <P>referenciando no Script</P>
+    <div id="areaJS">
+        interaja - Js
+    </div>
+
+
+    <script>
+        // referenciando completamente no script
+        let areaJS = window.document.getElementById('areaJS')
+        areaJS.addEventListener('click', clicar)
+        areaJS.addEventListener('mouseenter', entrar)
+        areaJS.addEventListener('mouseout', sair)
+
+        // agora no html
+        let area = window.document.getElementById("area")
+        
+        function clicar() {
+            area.innerText = "Clicou !!"
+            area.style.backgroundColor = "red"
+        }
+
+        function entrar(){
+            area.innerText = 'Entrou !'
+        }
+
+        function sair(){
+            area.innerText = "Saiu"
+        }
+
+        
+
+    </script>
+</body>
+</html>

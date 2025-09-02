@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando</title>
+    <style>
+        body{
+            font-size: 18pt;
+            background-color: bisque;
+        }
+        div {
+            margin-top: 10px;
+        }
+        input{
+            width: 70px;
+            height: 30px;
+            font-size: 20px;
+        }
+        button{
+            margin-left: 65px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Somando numeros</h1>
+    <hr>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> <br>
+    <button onclick="clicar()">somar</button>
+    <div id="res">resultado</div>
+
+
+    <script>
+        function clicar(){
+            let txtn1 = document.getElementById('txtn1')
+            let txtn2 = document.getElementById('txtn2')
+            let res = document.getElementById('res')
+
+
+             let n1 = Number(txtn1.value)
+             let n2 = Number(txtn2.value)
+             let s = n1 + n2
+
+             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong> `
+        }
+    </script>
+</body>
+</html>
