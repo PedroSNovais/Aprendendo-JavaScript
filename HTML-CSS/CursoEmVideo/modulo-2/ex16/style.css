@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body{
+    background-color: #6B7366;
+    text-align: center;
+    align-items: center;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    height: 600px;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+div{
+    background-color: #BDBFAE;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+div:hover{ /* Psedoclass */
+    background-color: yellowgreen;
+    height: 155px;
+    width: 155px;
+}
+
+div:active{/* psedoclass */
+    background-color: aqua;
+}
+
+div > p{/* Elemento filho */
+    
+    width: 150px;
+    font-size: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+h1{
+    color: #20261ce0;
+    text-shadow: #6B7366;
+}
+
+.title2{ /* classe  do h2*/
+    color: #BDBFAE;
+    background-color: #20261ce0;
+    font: normal 20px helvetica;
+    padding: 2px;
+}
